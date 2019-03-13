@@ -97,6 +97,5 @@ public class GCHealthCheck {
 			.map(GarbageCollectorMXBean::getCollectionTime)
 			.filter(millis -> millis != -1)
 			.reduce(0L, Long::sum);
-
 	}
 }
