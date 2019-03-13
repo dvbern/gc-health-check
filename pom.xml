@@ -20,7 +20,7 @@
 
     <groupId>ch.dvbern.oss.healthcheck.gc</groupId>
     <artifactId>gc-health-check</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <properties>
         <slf4j.version>1.8.0-beta4</slf4j.version>
