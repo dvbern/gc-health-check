@@ -20,7 +20,7 @@
 
     <groupId>ch.dvbern.oss.healthcheck.gc</groupId>
     <artifactId>gc-health-check</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
 
     <properties>
         <spotbugs-maven-plugin.version>4.2.3</spotbugs-maven-plugin.version>
