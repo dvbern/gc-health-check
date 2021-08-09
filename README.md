@@ -28,8 +28,3 @@ public class HealthCheck {
 	}
 }
 ```
-
-## Where can I get the artifact?
-Sorry, we don't have any artifacts on a public repository. You will have to build this project and https://github.com/dvbern/oss-maven-parent-pom yourself.
-
-

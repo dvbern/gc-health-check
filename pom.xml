@@ -15,7 +15,7 @@
     <parent>
         <groupId>ch.dvbern.oss.maven</groupId>
         <artifactId>parent</artifactId>
-        <version>1.2.1</version>
+        <version>3.0.5</version>
     </parent>
 
     <groupId>ch.dvbern.oss.healthcheck.gc</groupId>
@@ -23,8 +23,8 @@
     <version>1.0.1-SNAPSHOT</version>
 
     <properties>
-        <slf4j.version>1.8.0-beta4</slf4j.version>
-        <junit.jupiter.version>5.4.0</junit.jupiter.version>
+        <spotbugs-maven-plugin.version>4.2.3</spotbugs-maven-plugin.version>
+        <slf4j.version>1.7.32</slf4j.version>
     </properties>
 
     <build>
@@ -44,25 +44,35 @@
         </plugins>
     </build>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.junit</groupId>
+                <artifactId>junit-bom</artifactId>
+                <version>5.7.2</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
         <dependency>
             <groupId>com.github.spotbugs</groupId>
             <artifactId>spotbugs-annotations</artifactId>
-            <version>3.1.11</version>
+            <version>${spotbugs-maven-plugin.version}</version>
             <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>${junit.jupiter.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-			<version>${junit.jupiter.version}</version>
-			<scope>test</scope>
-		</dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -76,6 +86,12 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <scm>
+        <connection>scm:git:git://github.com/dvbern/gc-health-check.git</connection>
+        <developerConnection>scm:git:ssh://github.com:dvbern/gc-health-check.git</developerConnection>
+        <url>https://github.com/dvbern/gc-health-check</url>
+    </scm>
 
     <developers>
         <developer>
