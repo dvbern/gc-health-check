@@ -78,6 +78,8 @@ public class GCHealthCheck {
 	 * The HealthCheck does not make sense when calling healthCheck.current() within a very short interval.
 	 * In that case, it will most likely be in failed state (100% GC).
 	 * The checks should be executed with some delay, to get reasonable percentage values.
+	 *
+	 * @return The current garbage collection details
 	 */
 	@NonNull
 	public GCDetails current() {
